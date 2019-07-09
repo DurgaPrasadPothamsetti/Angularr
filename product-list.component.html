@@ -1,0 +1,52 @@
+
+<div class="div">
+    <h1><i>These are the Product list</i></h1>
+    <button>Show Image</button>
+</div>
+<br>
+
+
+<div class="filter"><h2>Filter</h2><input type="text"></div>
+
+<table>
+    <tr></tr>
+    <tr>
+        <th>Product Name</th>
+
+
+        <td *ngFor="let product of products">{{ product.productName }}</td>
+
+    </tr>
+    <tr>
+        <th>Code</th>
+
+
+        <td *ngFor="let product of products">{{ product.productCode }}</td>
+    </tr>
+    <tr>
+        <th>Available</th>
+
+
+        <td *ngFor="let product of products">{{ product.releaseDate}}</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+
+
+        <td *ngFor="let product of products">${{ product.price}}</td>
+    </tr>
+    <tr>
+        <th>Rating</th>
+
+
+        <td *ngFor="let product of products">{{ product.starRating}}</td>
+    </tr>
+    <tr>
+        <th>Image</th>
+        
+
+        <td *ngFor="let product of products"  ><img src="{{ product.imageUrl }}" width="100px" height="100px"></td>
+         
+    </tr>
+
+</table>
